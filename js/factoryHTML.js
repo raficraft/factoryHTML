@@ -191,8 +191,9 @@ Object.size = function(obj) {
 let factoryHtml = new htmlFactory
 
 
-// On envoie à l'atelier qui nous retourne une chaine de caractère
+// On envoie à l'atelier dédié qui nous retourne une chaine de caractère
 let thisHtml = factoryHtml.createHtmlEl(myHtml,'elHtml')
+
 // Pour plus de simplicité on utilise la methode insertAdjacentHTML
 // Qui nous permet d'inserer l'élément plus précisement ou l'on veux.
 // @param de insertAdjacentHTML
@@ -200,13 +201,13 @@ let thisHtml = factoryHtml.createHtmlEl(myHtml,'elHtml')
 //  'afterbegin' : Juste à l'intérieur de l'element , avant son premier enfant.
 //  'beforeend' : Juste à l'intérieur de l'element , après son dernier enfant.
 //  'afterend' : Après element lui-même.
+
 document.querySelector("#insertHtmlString__wrapper").insertAdjacentHTML('afterbegin', thisHtml);
 console.log(thisHtml);
 console.info(typeof thisHtml);
-console.info('log');
 
 
-// On envoie à l'atelier qui nous retourne un objet
+// On envoie à l'atelier dédié qui nous retourne un objet
 let thisHtmlObject = factoryHtml.createHtmlEl(myHtml,'elHtmlObject')
 //Injection avec appendChild, l'objet ne peut être insérer avec insertAdjacentHTML
 document.querySelector("#insertHtmlObject__wrapper").appendChild(thisHtmlObject,body);
