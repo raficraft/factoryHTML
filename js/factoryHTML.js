@@ -209,6 +209,7 @@ console.info(typeof thisHtml);
 // On envoie à l'atelier dédié qui nous retourne un objet
 let thisHtmlObject = factoryHtml.createHtmlEl(myHtml,'elHtmlObject')
 
+
 // on peut acceder au elements comme si on interrogeait le dom
 
 console.log(thisHtmlObject.querySelector('.brick-special'))
