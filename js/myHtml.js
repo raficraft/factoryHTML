@@ -35,6 +35,21 @@ let myHtml =
                                             ['attr']:{'class':'brick'} ,
                                             ['child']:{
                                                 [0]:{
+                                                    ['html']:{'tag':'label'} , 
+                                                    ['attr']:{'for':'lastname'} ,
+                                                    ['textContent'] : {'text' : 'Prénom'}
+                                                },
+                                                [1]:{
+                                                    ['html']:{'tag':'input'} , 
+                                                    ['attr']:{'id':'lastName','class':'brickInput brick-special', "type":'text', "placeholder" : "Mon prénom","aria-label" : "test"} ,
+                                                }
+                                            }
+                                        },
+                                        [1]:{
+                                            ['html']:{'tag':'div'} , 
+                                            ['attr']:{'class':'brick'} ,
+                                            ['child']:{
+                                                [0]:{
                                                     ['html']:{'tag':'label'}, 
                                                     ['attr']:{'for':'lastname'} ,
                                                     ['textContent'] : {'text' : 'Nom'}
@@ -45,21 +60,6 @@ let myHtml =
                                                 }
                                             }
                                         },
-                                        [1]:{
-                                            ['html']:{'tag':'div'} , 
-                                            ['attr']:{'class':'brick'} ,
-                                            ['child']:{
-                                                [0]:{
-                                                    ['html']:{'tag':'label'} , 
-                                                    ['attr']:{'for':'lastname'} ,
-                                                    ['textContent'] : {'text' : 'Prénom'}
-                                                },
-                                                [1]:{
-                                                    ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'id':'lastName','class':'brickInput brick-special', "type":'text', "placeholder" : "Mon prénom","aria-label" : "test"} ,
-                                                }
-                                            }
-                                        },                                       
                                         [2]:{
                                             ['html']:{'tag':'div'} , 
                                             ['attr']:{'class':'brick'} ,
