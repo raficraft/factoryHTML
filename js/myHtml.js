@@ -35,12 +35,13 @@ let myHtml =
                                             ['attr']:{'class':'brick'} ,
                                             ['child']:{
                                                 [0]:{
-                                                    ['html']:{'tag':'label'} , 
-                                                    ['textContent'] : {'text' : 'Prénom'}
+                                                    ['html']:{'tag':'label'}, 
+                                                    ['attr']:{'for':'lastname'} ,
+                                                    ['textContent'] : {'text' : 'Nom'}
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brickInput', "type":'text', "placeholder" : "Mon prénom"} ,
+                                                    ['attr']:{'id':'lastname','class':'brick__input', "type":'text', "placeholder" : "Mon Nom"} ,
                                                 }
                                             }
                                         },
@@ -49,26 +50,28 @@ let myHtml =
                                             ['attr']:{'class':'brick'} ,
                                             ['child']:{
                                                 [0]:{
-                                                    ['html']:{'tag':'label'}, 
-                                                    ['textContent'] : {'text' : 'Nom'}
+                                                    ['html']:{'tag':'label'} , 
+                                                    ['attr']:{'for':'lastname'} ,
+                                                    ['textContent'] : {'text' : 'Prénom'}
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brick__input', "type":'text', "placeholder" : "Mon Nom"} ,
+                                                    ['attr']:{'id':'lastName','class':'brickInput brick-special', "type":'text', "placeholder" : "Mon prénom","aria-label" : "test"} ,
                                                 }
                                             }
-                                        },
+                                        },                                       
                                         [2]:{
                                             ['html']:{'tag':'div'} , 
                                             ['attr']:{'class':'brick'} ,
                                             ['child']:{
                                                 [0]:{
                                                     ['html']:{'tag':'label'},
+                                                    ['attr']:{'for':'email'} ,
                                                     ['textContent'] : {'text' : 'Email'}
                                                 },
                                                 [1]:{
-                                                    ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brick__input', "type":'emial', "placeholder" : "Email"} ,
+                                                    ['html']:{'tag':'input'}, 
+                                                    ['attr']:{'id':'email','class':'brick__input', "type":'emial', "placeholder" : "Email"} ,
                                                 }
                                             }
                                         },
@@ -77,12 +80,13 @@ let myHtml =
                                             ['attr']:{'class':'brick'} ,
                                             ['child']:{
                                                 [0]:{
-                                                    ['html']:{'tag':'label'} ,
+                                                    ['html']:{'tag':'label'},
+                                                    ['attr']:{'for':'message'} ,
                                                     ['textContent'] : {'text' : 'Votre message'}
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'textarea'} , 
-                                                    ['attr']:{'class':'brick__input', "placeholder" : "Message", "rows" : "5", "cols" : "28"}
+                                                    ['attr']:{'id':'message','class':'brick__input', "placeholder" : "Message", "rows" : "5", "cols" : "28"}
                                                 }
                                             }
                                         },

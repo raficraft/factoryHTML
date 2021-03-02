@@ -3,8 +3,7 @@ function htmlFactory() {
 
     this.createHtmlEl = function(data,method){
 
-        let makeData
-        
+        let makeData        
 
         switch(method){
 
@@ -17,7 +16,7 @@ function htmlFactory() {
 
             break;
 
-            //Method pour obtenir le code HTML générer dans un object
+            // Method pour obtenir le code HTML générer dans un object
             // Insert with appendChild ou autre injecteur d'objet 
 
             case 'elHtmlObject' :
@@ -209,10 +208,23 @@ console.info(typeof thisHtml);
 
 // On envoie à l'atelier dédié qui nous retourne un objet
 let thisHtmlObject = factoryHtml.createHtmlEl(myHtml,'elHtmlObject')
+
+
+// on peut acceder au elements comme si on interrogeait le dom
+
+console.log(thisHtmlObject.querySelector('.brick-special'))
+
+thisHtmlObject.querySelector('.brick-special').setAttribute('placeholder','placeholder dynamique')
+
+console.log(thisHtmlObject.querySelector('.brick-special'))
+
+
 //Injection avec appendChild, l'objet ne peut être insérer avec insertAdjacentHTML
 document.querySelector("#insertHtmlObject__wrapper").appendChild(thisHtmlObject,body);
 console.log(thisHtmlObject);
 console.log(typeof thisHtmlObject);
+
+
 
 
 
